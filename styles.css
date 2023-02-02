@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 /* theme
 blue - #0195D3
 light green - #55B001
@@ -15,6 +17,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+}
+
 header {
     max-width: 1250px;
     width: 100%;
@@ -28,7 +36,6 @@ header {
 
 .header-inner {
     position: relative;
-    /* border-bottom: 6px solid #0195D3; */
     display: flex;
     align-items: flex-start;
     width: 100%;
@@ -36,13 +43,14 @@ header {
 
 .header-decorative {
     display: flex;
+    margin-bottom: 5px;
 }
 
 .title {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 15px 15px 15px 5px;
+    padding: 15px 26px;
 }
 
 main {
@@ -76,17 +84,6 @@ main {
     margin: 15px;
 }
 
-.greeting-info {
-    text-align: center;
-}
-
-.decorative-tent__roof {
-    width: 35px;
-    height: 15px;
-    transform: skew(20deg);
-    background-color: #0195D3;
-}
-
 .decorative-tent__scallop {
     width: 35px;
     height: 30px;
@@ -95,35 +92,8 @@ main {
     background-color: #0195D3;
 }
 
-.decorative-tent:nth-child(even) .decorative-tent__scallop,
-.decorative-tent:nth-child(even) .decorative-tent__roof {
+.decorative-tent__scallop:nth-of-type(even) {
     background-color: #FFD401;
-}
-
-.decorative-box--top-left {
-    top: -105px;
-    left: -105px;
-    transform: rotate(10deg);
-}
-
-.decorative-box--bottom-left {
-    top: 50px;
-    left: -210px;
-    width: 175px;
-    height: 175px;
-    background-color: #55B001;
-    transform: rotate(70deg);
-}
-
-.decorative-box--bottom {
-    background-color: #E70000;
-    bottom: -128px;
-    transform: rotate(45deg);
-}
-
-.decorative-box--bottom-right {
-    bottom: -55px;
-    right: -55px;
 }
 
 .main-navigation-wrapper {
