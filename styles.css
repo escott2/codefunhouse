@@ -158,7 +158,6 @@ main {
     border-color: #F2B705;
 }
 
-
 /* shapes */
 .triangle-up {
     width: 100%;
@@ -167,3 +166,10 @@ main {
     border-right: 100px solid #F2B705;
     border-bottom: 50px solid #0487D9;
   }
+
+
+/* start newsletter sign up */
+.sign-up-container {
+    display: flex;
+}
+/* end newsletter sign up */
