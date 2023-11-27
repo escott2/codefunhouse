@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../styles.css" rel="stylesheet" />
+   <link href="../styles.css" rel="stylesheet" />
   <title>Creation Zone</title>
 </head>
 <body>
@@ -11,22 +11,25 @@
 
   <section>
     <h2>Newsletter Sign Up</h2>
-    <div class="sign-up-container">
-      <div class="sign-up__information">
-        <h3>Stay updated!</h3>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <form>
-          <input type="email" />
-          <button>Subscribe to monthly newsletter</button>
-        </form>
-      </div>
-      <div class="sign-up__image">
-        <img src="../assets/illustration-sign-up-desktop.svg" alt="monthly updates on digital screens"/>
+    <div class="sign-up-overlay">
+      <div class="sign-up-container">
+        <div class="sign-up__information">
+          <h3>Stay updated!</h3>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="sign-up__list">
+            <li class="sign-up__item">Product discovery and building what matters</li>
+            <li class="sign-up__item">Measuring to ensure updates are a success</li>
+            <li class="sign-up__item">And much more!</li>
+          </ul>
+          <form>
+            <label for="email-address">Email address</label>
+            <input id="email-address" type="email" />
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div class="sign-up__image-container">
+          <img class="sign-up__image" src="../assets/illustration-sign-up-desktop.svg" alt="monthly updates on digital screens"/>
+        </div>
       </div>
     </div>
   </section>
