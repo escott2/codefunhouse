@@ -1,8 +1,10 @@
 /* theme
-blue - #0487D9
-dark blue - #222640
-yellow - #F2B705
-red - #D94032 */
+text - #222640
+light-green - #DAFDBA
+green - #A0D94A
+blue - #45C4B0
+grey - #f6f6f6
+*/
 
 * {
     margin: 0;
@@ -28,6 +30,7 @@ header {
     position: relative;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     width: 100%;
     background-color: #DAFDBA;
     padding: 0 30px;
@@ -35,6 +38,7 @@ header {
 
 .header-decorative {
     display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -108,16 +112,15 @@ main {
 }
 
 .navigation-option {
-    color: #FFF;
-    padding: 30px 35px;
-    height: 140px;
+    padding: 25px 35px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     background-color: #FFF;
     border-radius: 10px;
     transition: transform .5s ease-out;
     text-decoration: none;
-    color: black;
+    color: #222640;
 }
 
 .navigation-option:hover {
@@ -141,4 +144,15 @@ main {
     margin-top: 50px;
     height: 250px;
     width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .header-inner {
+        justify-content: flex-start;
+    }
+
+    .header-decorative {
+        justify-content: flex-start;
+    }
 }
