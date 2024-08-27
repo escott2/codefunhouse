@@ -13,26 +13,33 @@ body {
 /* start header */
 
 header {
-  width: 100%;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
-
-.header-inner {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #dafdba;
-  padding: 0 30px;
 }
 
 .header-decorative {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.scroll-down-animation {
+  animation: slideFromLeft 0.5s linear;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .title-link {
@@ -46,6 +53,16 @@ header {
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #dafdba;
+  padding: 20px 35px 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 /* end header */
@@ -58,16 +75,30 @@ main {
   margin-top: 100px;
 }
 
-h2 {
+.page-title {
   font-size: 32px;
   font-weight: 400;
   font-family: "New Amsterdam", sans-serif;
-  font-display: fallback;
 }
 
 /* end common styles */
 
 /* start home page */
+
+.landing-zone {
+  height: 100vh;
+}
+
+.landing-decorative {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.landing-animation {
+  height: 100vh;
+  background-color: #dafdba;
+}
 
 .greeting {
   width: 100%;
@@ -96,10 +127,8 @@ h2 {
 }
 
 .decorative-tent__scallop {
-  width: 50px;
-  height: 50px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  width: 54px;
+  height: 25px;
   background-color: #a0d94a;
 }
 
@@ -187,11 +216,16 @@ h2 {
 /* start media queries */
 
 @media screen and (min-width: 768px) {
-  .header-inner {
+  .header {
     justify-content: flex-start;
   }
 
+  .title {
+    text-align: left;
+  }
+
   .header-decorative {
+    width: 100%;
     justify-content: flex-start;
   }
 }
